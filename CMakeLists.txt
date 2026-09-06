@@ -35,13 +35,3 @@ target_link_libraries(nwl PUBLIC Threads::Threads lib::muduo_log)
 
 add_library(lib::nwl ALIAS nwl)
 
-# 冒烟示例（M2 验收）
-add_executable(nwl_smoke examples/smoke_eventloop.cpp)
-target_link_libraries(nwl_smoke PRIVATE nwl)
-
-# Echo 服务端 + 压测客户端（M3/M4 验收）
-add_executable(nwl_echo_server examples/echo_server_nwl.cpp)
-target_link_libraries(nwl_echo_server PRIVATE nwl)
-
-add_executable(nwl_bench_client examples/echo_bench_client.cpp)
-target_link_libraries(nwl_bench_client PRIVATE Threads::Threads)

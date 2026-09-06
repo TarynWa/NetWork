@@ -20,7 +20,7 @@ set(NWL_SOURCES
     src/util/SocketsOps.cpp
 )
 
-add_library(nwl STATIC ${NWL_SOURCES})
+add_library(nwl SHARED ${NWL_SOURCES})
 
 target_include_directories(nwl
     PUBLIC
